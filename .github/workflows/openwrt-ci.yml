@@ -63,30 +63,30 @@ jobs:
           ./scripts/feeds install -a
 
       - name: Generate configuration file
-      run: |
+        run: |
           rm -f ./.config*
           touch ./.config
           cat >> .config <<EOF
           #
           # ========================固件定制部分========================
           #
-CONFIG_TARGET_x86=y
-CONFIG_TARGET_x86_64=y
-CONFIG_TARGET_x86_64_DEVICE_generic=y
-CONFIG_GNUTLS_ALPN=y
-CONFIG_GNUTLS_ANON=y
-CONFIG_GNUTLS_DTLS_SRTP=y
-CONFIG_GNUTLS_HEARTBEAT=y
-CONFIG_GNUTLS_OCSP=y
-CONFIG_GNUTLS_PSK=y
-CONFIG_LINUX_6_12=y
-CONFIG_OPENVPN_openssl_ENABLE_DEF_AUTH=y
-CONFIG_OPENVPN_openssl_ENABLE_FRAGMENT=y
-CONFIG_OPENVPN_openssl_ENABLE_LZ4=y
-CONFIG_OPENVPN_openssl_ENABLE_LZO=y
-CONFIG_OPENVPN_openssl_ENABLE_MULTIHOME=y
-CONFIG_OPENVPN_openssl_ENABLE_PF=y
-CONFIG_OPENVPN_openssl_ENABLE_PORT_SHARE=y
+          CONFIG_TARGET_x86=y
+          CONFIG_TARGET_x86_64=y
+          CONFIG_TARGET_x86_64_DEVICE_generic=y
+          CONFIG_GNUTLS_ALPN=y
+          CONFIG_GNUTLS_ANON=y
+          CONFIG_GNUTLS_DTLS_SRTP=y
+          CONFIG_GNUTLS_HEARTBEAT=y
+          CONFIG_GNUTLS_OCSP=y
+          CONFIG_GNUTLS_PSK=y
+          CONFIG_LINUX_6_12=y
+          CONFIG_OPENVPN_openssl_ENABLE_DEF_AUTH=y
+          CONFIG_OPENVPN_openssl_ENABLE_FRAGMENT=y
+          CONFIG_OPENVPN_openssl_ENABLE_LZ4=y
+          CONFIG_OPENVPN_openssl_ENABLE_LZO=y
+          CONFIG_OPENVPN_openssl_ENABLE_MULTIHOME=y
+          CONFIG_OPENVPN_openssl_ENABLE_PF=y
+          CONFIG_OPENVPN_openssl_ENABLE_PORT_SHARE=y
 CONFIG_OPENVPN_openssl_ENABLE_SMALL=y
 CONFIG_PACKAGE_6in4=y
 CONFIG_PACKAGE_attr=m
